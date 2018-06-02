@@ -6,8 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".home">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
     <FrameLayout
-        android:id="@+id/id_fl_index"
+        android:id="@+id/id_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:animateLayoutChanges="false"
@@ -15,13 +20,13 @@
     </FrameLayout>
 
     <android.support.design.widget.BottomNavigationView
-        android:id="@+id/id_bnv_index"
+        android:id="@+id/id_bottonNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:itemBackground="@color/colorPrimary"
-        app:itemIconTint="@drawable/selector_bottom_navigation"
-        app:itemTextColor="@drawable/selector_bottom_navigation"
-        app:menu="@menu/menu_bottom_navigation">
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:menu="@menu/menu_botton">
     </android.support.design.widget.BottomNavigationView>
-
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

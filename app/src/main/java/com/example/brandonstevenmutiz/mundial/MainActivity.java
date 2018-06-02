@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void bottom (View view){
-        Intent intent = new Intent(MainActivity.this, PostActivity.class);
+        Intent intent = new Intent(MainActivity.this, home.class);
         startActivity(intent);
     }
 }

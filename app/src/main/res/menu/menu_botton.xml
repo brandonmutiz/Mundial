@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/id_menubn_calendar"
-        android:title="@string/str_menubn_results"
-        android:icon="@drawable/ball_96"
+        android:id="@+id/id_levels"
+        android:title="Niveles"
+        android:icon="@drawable/levels"
         app:showAsAction="ifRoom"/>
     <item
-        android:id="@+id/id_menubn_group"
-        android:title="@string/str_menubn_groups"
-        android:icon="@drawable/group_96"
+        android:id="@+id/id_Mundial"
+        android:title="Mundiales"
+        android:icon="@drawable/copa"
         app:showAsAction="ifRoom"/>
     <item
-        android:id="@+id/id_menubn_news"
-        android:title="@string/str_menubn_news"
-        android:icon="@drawable/news_96"
+        android:id="@+id/id_profile"
+        android:title="Perfil"
+        android:icon="@drawable/gamer"
         app:showAsAction="ifRoom"/>
+
     <item
-        android:id="@+id/id_menubn_stadium"
-        android:title="@string/str_menubn_stadium"
-        android:icon="@drawable/stadium_96"
+        android:id="@+id/id_result"
+        android:title="Resultados"
+        android:icon="@drawable/resultados"
         app:showAsAction="ifRoom"/>
-    <item
-        android:id="@+id/id_menubn_profile"
-        android:title="@string/str_menubn_profile"
-        android:icon="@drawable/user_96"
-        app:showAsAction="ifRoom"/>
+
 </menu>
