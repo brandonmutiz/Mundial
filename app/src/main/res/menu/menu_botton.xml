@@ -2,20 +2,28 @@
 <menu
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item
-        android:id="@+id/id_levels"
-        android:title="Niveles"
-        android:icon="@drawable/levels"
+        android:id="@+id/id_profesional"
+        android:title="Profesional"
+        android:icon="@drawable/profesional"
         app:showAsAction="ifRoom"/>
     <item
-        android:id="@+id/id_Mundial"
+        android:id="@+id/id_estrella"
+        android:title="Estrella"
+        android:icon="@drawable/estrella"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/id_leyenda"
+        android:title="Leyenda"
+        android:icon="@drawable/leyenda"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/id_mundial"
         android:title="Mundiales"
         android:icon="@drawable/copa"
-        app:showAsAction="ifRoom"/>
-    <item
-        android:id="@+id/id_profile"
-        android:title="Perfil"
-        android:icon="@drawable/gamer"
         app:showAsAction="ifRoom"/>
 
     <item
@@ -23,5 +31,6 @@
         android:title="Resultados"
         android:icon="@drawable/resultados"
         app:showAsAction="ifRoom"/>
+
 
 </menu>

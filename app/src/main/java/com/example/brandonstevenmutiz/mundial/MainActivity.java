@@ -17,4 +17,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, home.class);
         startActivity(intent);
     }
+
+    public void CrearCuenta (View view){
+        Intent intent = new Intent(MainActivity.this, crear_cuenta.class);
+        startActivity(intent);
+    }
+
+
 }

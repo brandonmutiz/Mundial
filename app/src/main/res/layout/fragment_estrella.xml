@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".estrella.View.Fragment_estrella"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:weightSum="6"
+    android:background="@drawable/fondo_aplicacion"  >
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/id_rcv_estrella"
+        android:layout_weight="4"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/listo"
+        android:layout_gravity="center"
+        android:background="#008800"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="@android:color/black"
+        android:text="LISTO"
+        android:paddingBottom="12dp"
+        android:textStyle="bold"
+
+        />
+
+
+</LinearLayout>
