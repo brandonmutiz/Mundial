@@ -1,6 +1,9 @@
 package com.example.brandonstevenmutiz.mundial;
 
 import android.app.FragmentTransaction;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.widget.BottomNavigationView;
@@ -8,29 +11,45 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.brandonstevenmutiz.mundial.Respuestas.View.Fragment_result;
 import com.example.brandonstevenmutiz.mundial.estrella.View.Fragment_estrella;
 import com.example.brandonstevenmutiz.mundial.leyenda.View.Fragment_leyenda;
 import com.example.brandonstevenmutiz.mundial.mundial.View.Fragment_mundial;
 import com.example.brandonstevenmutiz.mundial.profesional.View.ProfesionalFragment;
 
 public class home extends AppCompatActivity {
-    BottomNavigationItemView bottonNavigation;
-
+    BottomNavigationView bottonNavigation;
+    SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        BottomNavigationView bottonNavigation = (BottomNavigationView) findViewById(R.id.id_bottonNavigation);
+        bottonNavigation = (BottomNavigationView) findViewById(R.id.id_bottonNavigation);
 
+    initSharedPreferences();
+
+    }
+    public void initSharedPreferences(){
+        sharedPreferences = getSharedPreferences("PreferencesMundialLogin", Context.MODE_PRIVATE);
+
+        String user = sharedPreferences.getString("user", null);
+
+        if ( (user == null) || (user.equals("")) ){
+            Intent intent = new Intent(this, home.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+        }else {
+            initBottomNavigation();
+        }
+    }
+    public void initBottomNavigation(){
         bottonNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-
                 switch (item.getItemId()){
                     case R.id.id_profesional:
-                         ProfesionalFragment profesionalFragment = new ProfesionalFragment();
+                        ProfesionalFragment profesionalFragment = new ProfesionalFragment();
                         getSupportFragmentManager()
                                 .beginTransaction()
                                 .replace(R.id.id_frame, profesionalFragment)
@@ -88,6 +107,5 @@ public class home extends AppCompatActivity {
                 return true;
             }
         });
-
     }
 }

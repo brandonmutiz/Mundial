@@ -7,5 +7,10 @@ public class Constants
     public static final String ROOT_PROFESIONAL ="profesional";
     public static final String ROOT_ESTRELLA="estrella";
     public static final String ROOT_LEYENDA="leyenda";
+    public static final String ROOT_LOGIN="login";
+    public static final String ROOT_SINGUP="signup";
+    public static final String ROOT_RESPUESTAS="respuestascorrectas";
+
+
 
 }
